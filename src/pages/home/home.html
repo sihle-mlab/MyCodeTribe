@@ -1,17 +1,26 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content style="background-color: whitesmoke">
+  <div id="top">
+    <img src="https://pbs.twimg.com/profile_images/506145672379105281/T_4Dk4Do.png" height="100" width="100" >
+    <h1 style="color: #142030">Curriculum</h1>
+          <div id="form">
+            <div id="login">
+                  <ion-list>
+                    <div id="profile-option" no-lines *ngFor="let course of courses" >
+                        <div id="icon-placeholder">
+                            <ion-icon class="buy" name={{course.icon}} ></ion-icon>
+                        </div>
+                        <div id="text-container-vertical">
+                        <h5 text-center>Course {{course.number}}</h5>
+                        <h4 text-center style="margin-top: 0"><b>{{course.title}}</b></h4>
+                        <p style="text-align:  center; font-size : 1.5rem; margin: 0;"></p>
+                        <button ion-button>
+                          <b>View</b>
+                        </button>
+                      </div>
+                  </div>
+              </ion-list>
+          </div>
+        </div>
+    </div>
+    
 </ion-content>

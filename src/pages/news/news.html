@@ -1,0 +1,42 @@
+<ion-content style="background-color: whitesmoke">
+    <div id="top">
+        <div id="icon-holder">
+          <div class="profile-information">
+            <button ion-button icon-only>
+                    <ion-icon name="flash"></ion-icon>
+            </button>
+          </div>
+          <h2>News Updates</h2>
+        </div>
+        <div id="form">
+            <ion-segment [(ngModel)]="type" padding>
+                <ion-segment-button value="general">
+                  General
+                </ion-segment-button>
+                <ion-segment-button style="border-color: black" value="curriculum">
+                  Curriculum
+                </ion-segment-button>
+              </ion-segment>
+            <div [ngSwitch]="type">
+            <ion-list no-padding *ngSwitchCase="'general'" style="margin-bottom: 10px">
+              <div id="login">
+                <button ion-item id="profile-option" *ngFor="let item of news">
+                  <h4>{{item.title}}</h4>
+                  <p>{{item.article}}</p>
+                  <p style="font-size: 1rem; margin: 0" item-end>{{item.time}}</p>
+                </button>
+              </div>
+            </ion-list>
+            <ion-list no-padding *ngSwitchCase="'curriculum'" style="margin-bottom: 10px;">
+              <div id="login">
+                  <button ion-item id="profile-option" *ngFor="let item of curriculums">
+                    <h4>{{item.title}}</h4>
+                    <p>{{item.article}}</p>
+                    <p style="font-size: 1rem; margin: 0" item-end>{{item.time}}</p>
+                  </button>
+              </div>
+            </ion-list>
+            </div>
+        </div>
+    </div>
+</ion-content>
