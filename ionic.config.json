@@ -1,0 +1,8 @@
+{
+  "name": "MyCodeTribe",
+  "app_id": "a10e0c90",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
