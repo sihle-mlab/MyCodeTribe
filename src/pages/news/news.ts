@@ -33,22 +33,22 @@ export class NewsPage {
 
 const news = [
   {
-    title: "CodeTribe Academy graduation",
+    title: "CodeTribe graduation",
     time: "March, the 2nd",
     article : "So, another chapter closes - no pun intended. March saw a lot of our CodeTribe students graduating and moving on to their next journey."
   },
   {
-    title: "CodeTribe Digital-Gen graduation",
+    title: "Digital-Gen graduation",
     time: "March, the 31st",
     article : "This chapter of CodeTribe saw us do something we have never done before..."
   },
   {
-    title: "CodeTribe applications open",
+    title: "Applications open",
     time: "February, the 24th",
     article : "CodeTribe Academy applications 2018/2019 now open. Please ensure your loved ones read the requirements but also, we'd like to know who you are..."
   },
   {
-    title: "CodeTribe Alex closed",
+    title: "Alex closed",
     time: "March, the 17th",
     article : "It's always sad when you endevour to create something , to plant a seed only to have it later uprooted. This was the case when we had to shut down..."
   },
@@ -61,7 +61,7 @@ const news = [
 
 const curriculum_news = [
   {
-    title: "New and improved curriculum",
+    title: "New curriculum",
     time: "January, the 14th",
     article : "Every now and again there comes a time when..."
   },
@@ -76,12 +76,12 @@ const curriculum_news = [
     article : "We have also added a couple of practice..."
   },
   {
-    title: "Curriculum Review",
+    title: "Review",
     time: "March, the 6th",
     article : "To ensure a consistent standard throughout"
   },
   {
-    title: "CodeTribe opening",
+    title: "CodeTribe reopening",
     time: "A day ago",
     article : "It's important that you get yourself familiarized with this curriculum. This will go..."
   }
