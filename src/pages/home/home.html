@@ -13,8 +13,8 @@
                         <h5 text-center>Course {{course.number}}</h5>
                         <h4 text-center style="margin-top: 0"><b>{{course.title}}</b></h4>
                         <p style="text-align:  center; font-size : 1.5rem; margin: 0;"></p>
-                        <button ion-button>
-                          <b>View</b>
+                        <button ion-button (click)="viewLessons(course.lessons, course)">
+                          <b>View lessons</b>
                         </button>
                       </div>
                   </div>

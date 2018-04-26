@@ -18,24 +18,24 @@
                 </ion-segment-button>
               </ion-segment>
             <div [ngSwitch]="type">
-            <ion-list no-padding *ngSwitchCase="'general'" style="margin-bottom: 10px">
-              <div id="login">
-                <button ion-item id="profile-option" *ngFor="let item of news">
-                  <h4>{{item.title}}</h4>
-                  <p>{{item.article}}</p>
-                  <p style="font-size: 1rem; margin: 0" item-end>{{item.time}}</p>
-                </button>
-              </div>
-            </ion-list>
-            <ion-list no-padding *ngSwitchCase="'curriculum'" style="margin-bottom: 10px;">
-              <div id="login">
-                  <button ion-item id="profile-option" *ngFor="let item of curriculums">
-                    <h4>{{item.title}}</h4>
-                    <p>{{item.article}}</p>
-                    <p style="font-size: 1rem; margin: 0" item-end>{{item.time}}</p>
-                  </button>
-              </div>
-            </ion-list>
+                <ion-list no-padding *ngSwitchCase="'general'" style="margin-bottom: 10px">
+                  <div id="login">
+                    <button ion-item id="profile-option" *ngFor="let item of generalNews">
+                      <h4>{{item.title}}</h4>
+                      <p>{{item.article}}</p>
+                      <p style="font-size: 1rem; margin: 0" item-end>{{item.time}}</p>
+                    </button>
+                  </div>
+                </ion-list>
+                <ion-list no-padding *ngSwitchCase="'curriculum'" style="margin-bottom: 10px;">
+                  <div id="login">
+                      <button ion-item id="profile-option" *ngFor="let item of curriculumNews">
+                        <h4>{{item.title}}</h4>
+                        <p>{{item.article}}</p>
+                        <p style="font-size: 1rem; margin: 0" item-end>{{item.time}}</p>
+                      </button>
+                  </div>
+                </ion-list>
             </div>
         </div>
     </div>

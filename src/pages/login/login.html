@@ -1,0 +1,36 @@
+<ion-content padding>
+    <div id="top">
+      <div class="header">
+        <img src="https://pbs.twimg.com/profile_images/506145672379105281/T_4Dk4Do.png" height="100" width="100" >
+      <h4 color="light">MyCodeTribe</h4>
+      </div>
+    </div>
+     <div id="bottom">
+        <div id="form">
+              <div id="login">
+                <form (ngSubmit)="login()" #registerForm="ngForm" >
+                <ion-item>
+                  <ion-label floating>Email</ion-label>
+                  <ion-input type="email" name="email" hint="email" [(ngModel)]="registerCredentials.email" required></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label floating>Password</ion-label>
+                  <ion-input type="password" name="password" hint="password" [(ngModel)]="registerCredentials.password" required></ion-input>
+                </ion-item>
+                <p *ngIf="showErrorMessage == true" text-right style="color: red; margin:0; font-weight: bolder">Incorrect credentials.</p>
+                <div id="button">
+                    <button ion-button type="submit" [disabled]="!registerForm.form.valid">Login</button>
+                </div>
+                </form>
+              </div>
+        </div>
+        <div class="centering">
+          <button id="cancel-button" ion-button clear >Register</button>
+          <button ion-button clear style="color: black">Forgot password</button>
+        </div>
+        <div id="bottom-text">
+          <p>mLab Southern Africa &copy; 2018. All Rights Reserved.</p>
+        </div>
+    </div>
+  </ion-content>
+  

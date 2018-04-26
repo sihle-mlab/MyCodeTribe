@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
 
 /**
  * Generated class for the HomePage page.
@@ -18,12 +18,41 @@ export class HomePage {
   courses = []
   lessons = []
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public actionSheetCtrl: ActionSheetController) {
     this.courses = courses;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+  viewLessons(lessons: any[], course : any){
+    this.lessons = [];
+    lessons.forEach(element => {
+        let item = {
+          text: element.title,
+          handler: () => {
+            console.log('Item clicked');
+          }
+        }
+        this.lessons.push(item);
+    });
+
+
+    let cancel = {
+      text: "Cancel",
+      role: 'cancel',
+      handler: () => {
+        console.log('cancel clicked');
+      }
+    }
+
+    this.lessons.push(cancel);
+    this.presentActionSheet("Course " + course.number + " : " + course.title);
+  }
+
+  presentActionSheet(title: string) {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: title,
+      buttons: this.lessons
+    });
+    actionSheet.present();
   }
 
 }
@@ -44,7 +73,7 @@ const courses = [
         number: 2
       }, 
       {
-        title: "Introduction to HTML, CSS and JavaScript",
+        title: "Intro to Web Development",
         number: 3
       }, 
     ]
@@ -88,7 +117,7 @@ const courses = [
         number: 2
       }, 
       {
-        title: "Work with the Ionic Framework and Control Flow",
+        title: "Ionic Framework and Control Flow",
         number: 3
       }, 
     ]

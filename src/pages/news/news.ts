@@ -15,18 +15,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NewsPage {
 
-  news = []
-  curriculums = []
+  generalNews = []
+  curriculumNews = []
   type : string = "general"
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.news = news.reverse();
-    this.curriculums = curriculum_news.reverse();
-    console.log(this.curriculums);
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewsPage');
+    this.generalNews = news.reverse();
+    this.curriculumNews = curriculum_news.reverse();
   }
 
 }
